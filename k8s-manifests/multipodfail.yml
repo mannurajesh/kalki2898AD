@@ -1,0 +1,18 @@
+#top four items
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxpod 
+spec:
+  containers:
+  - name: nginx2
+    image: nginx
+    ports: 
+    - containerPort: 80
+
+
+
+  - name: nginx1
+    image: nginx
+    ports:
+    - containerPort: 80
