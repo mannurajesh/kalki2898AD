@@ -1,0 +1,43 @@
+#  -comment
+#  keyvalues
+name: rajesh
+city: hyd
+pincode: 500081
+
+# dictionary
+persons:
+  name: rajesh
+  city: hyd
+  pincode: 500081
+
+#not a dictionary
+persons: 
+name: rajesh
+city: hyd
+pincode: 500081
+
+# list / Array
+persons: #dictionary
+  name: rajesh
+  city: hyd
+  pincode: 500081
+  activities:
+    - code
+    - test
+    - deploy
+
+#multiple lists
+persons: #dictionary
+    name: rajesh
+    city: hyd
+    pincode: 500081
+    activities:
+    - code
+    - test
+    - deploy
+    colloborators: 
+    - name: warner
+      city: australia
+    - name: samson
+      city: kerala
+
