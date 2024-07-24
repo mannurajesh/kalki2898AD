@@ -1,0 +1,18 @@
+#top four items
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multipod
+spec:
+  containers:
+  - name: nginx2
+    image: nginx
+    ports: 
+    - containerPort: 80
+
+
+
+  - name: nginx1
+    image: rav2krishna/nodejs-api
+    ports:
+    - containerPort: 8080
