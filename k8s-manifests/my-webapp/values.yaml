@@ -1,20 +1,20 @@
 #For deployment
 deployment: 
-  name: 
-  replicas:
-  label:
-  container:
-  image:
-  port:
+  name: nginx
+  replicas: 1
+  label: nginx
+  container: nginx-container
+  image: nginx
+  port: 80
 
 
 #For Service 
 service:
-  name:
-  type:
-  label:
-  port:
-  nodeport:
+  name: nginx
+  type: Nodeport
+  label: nginx
+  port: 80
+  nodeport: 30008
 
 #for my sake i am saving in git-hub
 
