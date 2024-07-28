@@ -1,12 +1,12 @@
-apiVersion: 
-kind: 
+apiVersion: v1 
+kind: Service
 metadata:
-  name: {{.value.service.name}} 
+  name: {{.Values.service.name}} 
 spec:
-  type: {{.value.service.type}}
+  type: {{.Values.service.type}}
   selector:
-    app: {{.value.service.label}}
+    app: {{.Values.service.label}}
   ports:
-    - port: {{.value.service.port}}
-      targetPort: {{.value.service.port}}
-      nodePort:  {{.value.service.nodeport}}
+    - port: {{.Values.service.port}}
+      targetPort: {{.Values.service.port}}
+      nodePort: {{.Values.service.nodeport}}
