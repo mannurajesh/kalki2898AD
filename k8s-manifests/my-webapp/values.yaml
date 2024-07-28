@@ -1,0 +1,20 @@
+#For deployment
+deployment: 
+  name: 
+  replicas:
+  label:
+  container:
+  image:
+  port:
+
+
+#For Service 
+service:
+  name:
+  type:
+  label:
+  port:
+  nodeport:
+
+#for my sake i am saving in git-hub
+
