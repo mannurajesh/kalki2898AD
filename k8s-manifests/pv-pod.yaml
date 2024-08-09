@@ -4,7 +4,7 @@ metadata:
   name: task-pv-pod
 spec:
   volumes:
-    - name: task-pv-storage
+    - name: task-pv-volume
       persistentVolumeClaim:
         claimName: task-pv-claim
   containers:
@@ -15,7 +15,7 @@ spec:
           name: "http-server"
       volumeMounts:
         - mountPath: "/usr/share/nginx/html"
-          name: task-pv-storage
+          name: task-pv-volume
 
 
 
