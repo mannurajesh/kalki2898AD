@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Namespace
+metadata: 
+  name: prod
+
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-deploy
+  namespace: prod
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: login
+  template: 
+    metadata:
+      labels:
+        app: login
+    spec:
+      containers: 
+      - name: login-container
+        image: mannurajesh/kalki2898ad
+        ports:
+        - containerPort: 80  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: login-service
+  namespace: prod
+spec:
+  type: LoadBalancer
+  selector:
+    app: login
+  ports:
+    - port: 80
